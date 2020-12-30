@@ -1,0 +1,4 @@
+<j:jelly xmlns:j="jelly:core">
+  <j:set var="comment" value="${it.getFakeComment(job)}"/>
+  <td data="${comment}">${comment}</td>
+</j:jelly>

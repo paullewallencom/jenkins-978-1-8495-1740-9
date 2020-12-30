@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/cookbook/!svn/ver/70/trunk/ch7.plugins/escaped/src/main/resources/org/jenkinsci/plugins/escapedmarkup/EscapedMarkupFormatter
+END
+config.properties
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/cookbook/!svn/ver/70/trunk/ch7.plugins/escaped/src/main/resources/org/jenkinsci/plugins/escapedmarkup/EscapedMarkupFormatter/config.properties
+END
+config.jelly
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/cookbook/!svn/ver/70/trunk/ch7.plugins/escaped/src/main/resources/org/jenkinsci/plugins/escapedmarkup/EscapedMarkupFormatter/config.jelly
+END
+config_ja.properties
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/cookbook/!svn/ver/70/trunk/ch7.plugins/escaped/src/main/resources/org/jenkinsci/plugins/escapedmarkup/EscapedMarkupFormatter/config_ja.properties
+END

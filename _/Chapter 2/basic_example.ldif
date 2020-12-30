@@ -1,0 +1,26 @@
+dn: ou=mycompany,dc=nodomain
+objectClass: organizationalUnit
+ou: mycompany
+
+dn: ou=people,ou=mycompany,dc=nodomain
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,ou=mycompany,dc=nodomain
+objectClass: organizationalUnit
+ou: groups
+
+dn: uid=tester1,ou=people,ou=mycompany,dc=nodomain
+objectClass: inetOrgPerson
+uid: tester1
+sn: Tester
+cn: I AM A Tester
+displayName: tester1 Tester
+userPassword: changeme
+mail: tester1.tester@dev.null
+
+dn: cn=dev,ou=groups,ou=mycompany,dc=nodomain
+objectclass: groupofnames
+cn: Development
+description: Group for Development projects
+member: uid=tester1,ou=people,dc=mycompany,dc=nodomain

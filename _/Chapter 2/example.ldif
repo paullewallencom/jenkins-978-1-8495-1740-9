@@ -1,0 +1,9 @@
+dn: uid=tester121,ou=people,ou=mycompany,dc=nodomain
+objectClass: inetOrgPerson
+uid: tester121
+sn: Tester
+givenName: Tester121 Tester
+cn: Tester121 Tester
+displayName: Tester121 Tester
+userPassword: changeme
+mail: 121.tester@dev.null

@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>nl.uva.berg</groupId>
+  <artifactId>overlay</artifactId>
+  <packaging>war</packaging>
+<!-- Keep version the same as Jenkins as a hint -->
+  <version>1.437</version>
+  <name>overlay Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+ <dependencies>
+  <dependency>
+      <groupId>org.jenkins-ci.main</groupId>
+      <artifactId>jenkins-war</artifactId>
+      <version>1.437</version>
+      <type>war</type>
+      <scope>runtime</scope>
+  </dependency>  
+ </dependencies>
+  <repositories>
+    <repository>
+      <id>m.g.o-public</id>
+      <url>http://maven.glassfish.org/content/groups/public/</url>
+    </repository>
+  </repositories>
+</project>

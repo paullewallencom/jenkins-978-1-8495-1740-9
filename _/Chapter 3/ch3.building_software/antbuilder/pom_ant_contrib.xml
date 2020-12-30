@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.berg</groupId>
+  <artifactId>ch3.jenkins.builds</artifactId>      
+  <version>1.0-SNAPSHOT</version>
+  <name>Ant example</name>
+<build>
+ <plugins><plugin>
+ <groupId>org.codehaus.gmaven</groupId>
+ <artifactId>gmaven-plugin</artifactId>
+ <version>1.3</version> 
+<executions><execution>
+ <id>run-mygroovy</id>
+ <goals><goal>execute</goal></goals>
+ <phase>verify</phase>
+<configuration>
+ <source>
+def ant = new AntBuilder()
+//Get user name and password
+print "user: "
+user = System.console().readPassword()
+userStr = new String(user)
+print "password: "
+pw = System.console().readPassword()
+pwStr = new String(pw)
+
+for ( i in 1..92 ) {
+counterStr=String.format('%02d',i)
+ant.scp(trust:'true',file:"${user}:${pw}${host}${counterStr}:/${full_path_to_location}",
+        localTofile:"${myfile}-${counterStr}", verbose:"true")   
+} 
+ </source>
+ </configuration>
+ </execution></executions>
+ <dependencies>
+  <dependency>
+    <groupId>ant</groupId>
+    <artifactId>ant</artifactId>
+    <version>1.6.5</version>
+  </dependency>
+  <dependency>
+    <groupId>ant</groupId>
+    <artifactId>ant-launcher</artifactId>
+    <version>1.6.5</version>
+  </dependency>
+          <dependency>
+            <groupId>ant</groupId>
+            <artifactId>ant-jsch</artifactId>
+            <version>1.6.5</version>
+          </dependency>
+          <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>0.1.42</version>
+          </dependency>
+   </dependencies>
+ </plugin></plugins>
+</build>
+</project>
+

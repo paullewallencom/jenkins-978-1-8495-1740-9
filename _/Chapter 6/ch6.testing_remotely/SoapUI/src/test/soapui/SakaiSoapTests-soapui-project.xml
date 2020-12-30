@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="SakaiSoapTests" soapui-version="4.0.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="PingTestSoapBinding" type="wsdl" bindingName="{http://localhost:39955/sakai-axis/PingTest.jws}PingTestSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:39955/sakai-axis/PingTest.jws?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:39955/sakai-axis/PingTest.jws?wsdl"><con:part><con:url>http://localhost:39955/sakai-axis/PingTest.jws?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://localhost:39955/sakai-axis/PingTest.jws" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://localhost:39955/sakai-axis/PingTest.jws" xmlns:intf="http://localhost:39955/sakai-axis/PingTest.jws" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:message name="pingRequest">
+    <wsdl:part name="ignore" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="pingResponse">
+    <wsdl:part name="pingReturn" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="pongRequest">
+    <wsdl:part name="ignoreMeAsWell" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="pongResponse">
+    <wsdl:part name="pongReturn" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:portType name="PingTest">
+    <wsdl:operation name="pong" parameterOrder="ignoreMeAsWell">
+      <wsdl:input message="impl:pongRequest" name="pongRequest"/>
+      <wsdl:output message="impl:pongResponse" name="pongResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="ping" parameterOrder="ignore">
+      <wsdl:input message="impl:pingRequest" name="pingRequest"/>
+      <wsdl:output message="impl:pingResponse" name="pingResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PingTestSoapBinding" type="impl:PingTest">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="pong">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="pongRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="pongResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:39955/sakai-axis/PingTest.jws" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="pingRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="pingResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:39955/sakai-axis/PingTest.jws" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PingTestService">
+    <wsdl:port binding="impl:PingTestSoapBinding" name="PingTest">
+      <wsdlsoap:address location="http://localhost:39955/sakai-axis/PingTest.jws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:39955/sakai-axis/PingTest.jws</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="ping" bindingOperationName="ping" type="Request-Response" outputName="pingResponse" inputName="pingRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:39955/sakai-axis/PingTest.jws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:def="http://DefaultNamespace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <def:ping soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ignore xsi:type="xsd:string">?</ignore>
+      </def:ping>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost:39955/sakai-axis/PingTest.jws/PingTest/pingRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="pong" bindingOperationName="pong" type="Request-Response" outputName="pongResponse" inputName="pongRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:39955/sakai-axis/PingTest.jws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:def="http://DefaultNamespace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <def:pong soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ignoreMeAsWell xsi:type="xsd:string">?</ignoreMeAsWell>
+      </def:pong>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost:39955/sakai-axis/PingTest.jws/PingTest/pongRequest"/></con:call></con:operation></con:interface><con:testSuite name="PingTestSoapBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ping TestCase" searchProperties="true" id="6f23644b-8061-4bfe-af83-8ddc68083dd4"><con:settings/><con:testStep type="request" name="ping"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>PingTestSoapBinding</con:interface><con:operation>ping</con:operation><con:request name="ping"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:39955/sakai-axis/PingTest.jws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:def="http://DefaultNamespace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <def:ping soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ignore xsi:type="xsd:string">?</ignore>
+      </def:ping>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple NotContains" name="Not Contains"><con:configuration><token>Insecure answer =>?</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://localhost:39955/sakai-axis/PingTest.jws/PingTest/pingRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="pong TestCase" searchProperties="true" id="25473e0c-c743-42b6-a5b6-e8839b51145b"><con:settings/><con:testStep type="request" name="pong"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>PingTestSoapBinding</con:interface><con:operation>pong</con:operation><con:request name="pong"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:39955/sakai-axis/PingTest.jws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:def="http://DefaultNamespace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <def:pong soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <ignoreMeAsWell xsi:type="xsd:string">?</ignoreMeAsWell>
+      </def:pong>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://localhost:39955/sakai-axis/PingTest.jws/PingTest/pongRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>

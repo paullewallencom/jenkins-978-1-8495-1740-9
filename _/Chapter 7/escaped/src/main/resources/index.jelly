@@ -1,0 +1,4 @@
+<div>
+  This plugin escapes the description of project , user, view , and build  to prevent from XSS.
+  Revision: Unescaped banner added at the end.
+</div>

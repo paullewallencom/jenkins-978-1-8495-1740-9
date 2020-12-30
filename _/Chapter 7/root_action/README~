@@ -1,0 +1,2 @@
+To run as quickly as possible without tests on port 8090
+mvn -Dmaven.test.skip=true -DskipTests=true clean install hpi:run -Djetty.port=8090

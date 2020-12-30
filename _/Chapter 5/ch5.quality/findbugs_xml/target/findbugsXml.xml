@@ -1,0 +1,24 @@
+<BugCollection version="1.3.9">
+<Project projectName="findbugs_xml" />
+<BugInstance category="PERFORMANCE" priority="2" abbrev="Dm" type="DM_STRING_CTOR" >
+<ShortMessage>
+Method invokes inefficient new String(String) constructor
+</ShortMessage>
+<LongMessage>
+nl.berg.packt.findbugs_all.candles.FindBugsCandle.myBad() invokes inefficient new String(String) constructor
+</LongMessage>
+<Class classname="nl.berg.packt.findbugs_all.candles.FindBugsCandle" primary="true">
+<SourceLine start="3" classname="nl.berg.packt.findbugs_all.candles.FindBugsCandle" sourcepath="nl/berg/packt/findbugs_all/candles/FindBugsCandle.java" sourcefile="FindBugsCandle.java" end="9">
+</Class>
+<Method isStatic="false" classname="nl.berg.packt.findbugs_all.candles.FindBugsCandle" name="myBad" primary="true" signature="()Z">
+<SourceLine endBytecode="81" startBytecode="0" start="7" classname="nl.berg.packt.findbugs_all.candles.FindBugsCandle" sourcepath="nl/berg/packt/findbugs_all/candles/FindBugsCandle.java" sourcefile="FindBugsCandle.java" end="9"/>
+<Message>
+In method nl.berg.packt.findbugs_all.candles.FindBugsCandle.myBad()
+</Message>
+</Method>
+<SourceLine endBytecode="6" startBytecode="6" start="7" classname="nl.berg.packt.findbugs_all.candles.FindBugsCandle" primary="true" sourcepath="nl/berg/packt/findbugs_all/candles/FindBugsCandle.java" sourcefile="FindBugsCandle.java" end="7">
+<Message>At FindBugsCandle.java:[line 7]</Message>
+</SourceLine>
+</BugInstance>
+</BugCollection>
+

@@ -1,0 +1,25 @@
+<project default="jmeter.tests">
+    <property name="jmeter" location="/var/lib/jenkins/jmeter" />
+    <property name="target" location="${basedir}/target" />   
+     <echo message="Running ... Expecting variables [jvarg,desc]" />
+     <echo message="For configuration help please read ${basedir}/README"/>
+     <echo message="[DESCRIPTION] ${desc}" />
+    <taskdef  name="jmeter"  classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask"
+        classpath="${jmeter}/extras/ant-jmeter-1.0.9.jar" />
+    <target name="jmeter.init">
+        <mkdir  dir="${basedir}/jmeter_results"/>
+         <delete includeemptydirs="true">
+            <fileset dir="${basedir}/jmeter_results" includes="**/*" />
+        </delete>
+    </target>
+    <target name="jmeter.tests" depends="jmeter.init" description="launch jmeter load tests">
+        <echo message="[Running] jmeter tests..." />
+        <jmeter
+            jmeterhome="${jmeter}"
+            resultlog="${basedir}/jmeter_results/LoadTestResults.jtl">
+            <testplans dir="${basedir}/plans" includes="*.jmx"/>
+            <jvmarg value="${jvarg}" />
+             <property name="csv" value="${basedir}/data/URLS.csv" />
+        </jmeter>
+    </target>
+</project>

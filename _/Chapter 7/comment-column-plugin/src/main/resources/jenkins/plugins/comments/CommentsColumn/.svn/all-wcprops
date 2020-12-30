@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/cookbook/!svn/ver/66/trunk/ch7.plugins/comment-column-plugin/src/main/resources/jenkins/plugins/comments/CommentsColumn
+END
+columnHeader_an.properties
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/cookbook/!svn/ver/66/trunk/ch7.plugins/comment-column-plugin/src/main/resources/jenkins/plugins/comments/CommentsColumn/columnHeader_an.properties
+END
+columnHeader.properties
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/cookbook/!svn/ver/66/trunk/ch7.plugins/comment-column-plugin/src/main/resources/jenkins/plugins/comments/CommentsColumn/columnHeader.properties
+END
+columnHeader.jelly
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/cookbook/!svn/ver/66/trunk/ch7.plugins/comment-column-plugin/src/main/resources/jenkins/plugins/comments/CommentsColumn/columnHeader.jelly
+END
+column.jelly
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/cookbook/!svn/ver/66/trunk/ch7.plugins/comment-column-plugin/src/main/resources/jenkins/plugins/comments/CommentsColumn/column.jelly
+END
